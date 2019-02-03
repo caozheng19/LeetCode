@@ -1,10 +1,13 @@
 package leetcode.problem2;
 
 class ListNode {
-      int val;
-     ListNode next;
-     ListNode(int x) { val = x; }
+    int val;
+    ListNode next;
 
+    ListNode(int x) {
+        val = x;
+    }
+}
 /*
    题目的关键在于我是把个位数放在哪
    我原本是想放在当前node节点
@@ -52,5 +55,4 @@ class Solution {
         }
         return result.next;
     }
-
 }
