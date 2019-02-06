@@ -1,5 +1,4 @@
 package leetcode.problem3;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,28 +9,45 @@ import java.util.Set;
 */
 class Solution {
     public int lengthOfLongestSubstring(String s) {
-
-        int len  = s.length();
+        int len = s.length();
         int maxLong = 0;
-        for(int i = 0;i<len;i++){
-            for(int j = i+1;j<=len;j++){
-                boolean result = judgeUnique(s,i,j);
-                if(result) maxLong = Math.max(maxLong,j-i);
-
+        int i = 0;
+        int j = 0;
+        Set<Character> set = new HashSet<>();
+        while(i<len&&j<len){
+            if(!set.contains(s.charAt(j))){
+                set.add(s.charAt(j++));
+                maxLong = Math.max(maxLong,j-i);
+            }else{
+                set.remove(s.charAt(i++));
             }
+
         }
         return maxLong;
     }
+//     public int lengthOfLongestSubstring(String s) {
 
-    public boolean judgeUnique(String s,int i,int j){
-        Set<Character> set = new HashSet<>();
-        //注意这里是ii<j 不是ii<=j
-        for(int ii =i;ii<j;ii++ ){
-            Character c = s.charAt(ii);
-            if(set.contains(c)) return false;
-            set.add(c);
-        }
-        return true;
-    }
+//         int len  = s.length();
+//         int maxLong = 0;
+//         for(int i = 0;i<len;i++){
+//             for(int j = i+1;j<=len;j++){
+//                 boolean result = judgeUnique(s,i,j);
+//                 if(result) maxLong = Math.max(maxLong,j-i); 
+
+//             }
+//         }
+//         return maxLong;
+//     }
+
+//     public boolean judgeUnique(String s,int i,int j){
+//         Set<Character> set = new HashSet<>();
+//         //注意这里是ii<j 不是ii<=j
+//         for(int ii =i;ii<j;ii++ ){
+//             Character c = s.charAt(ii);
+//             if(set.contains(c)) return false;
+//             set.add(c);
+//         }
+//         return true;
+//     }
 
 }
