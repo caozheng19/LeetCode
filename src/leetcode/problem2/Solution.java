@@ -7,6 +7,7 @@ class ListNode {
     ListNode(int x) {
         val = x;
     }
+
 }
 /*
    题目的关键在于我是把个位数放在哪
