@@ -19,7 +19,7 @@ class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
         if (root == null) return new ArrayList<>();
         List outerList = new ArrayList<>();
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();//如果这里的<>什么也不写  TreeNode treeNode = queue.poll();这一行会报错无法转换成相应类型
         queue.add(root);
         System.out.println(root);
         while (!queue.isEmpty()) {
