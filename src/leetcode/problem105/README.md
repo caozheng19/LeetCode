@@ -1,0 +1,1 @@
+[指针方式](https://www.cnblogs.com/fengziwei/p/7891965.html)
