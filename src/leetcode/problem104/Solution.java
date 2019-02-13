@@ -37,6 +37,7 @@ public class Solution {
              }
              outerList.add(innerList);
         }
+
         return depthCount;
     }
 }
