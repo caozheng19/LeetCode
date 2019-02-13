@@ -11,6 +11,7 @@ class TreeNode {
     }
 }
 public class Solution {
+
     public boolean hasPathSum(TreeNode root, int sum) {
         Stack<TreeNode> stack = new Stack<TreeNode>();
         if(root==null) return false;
