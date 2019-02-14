@@ -7,6 +7,7 @@ class TreeNode {
       TreeNode right;
       TreeNode(int x) { val = x; }
   }
+
 class Solution {
     private TreeNode ancestor = new TreeNode(0);
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
