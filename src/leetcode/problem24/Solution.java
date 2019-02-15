@@ -7,6 +7,7 @@ class ListNode {
       ListNode(int x) { val = x; }
   }
 
+
 class Solution {
     public ListNode swapPairs(ListNode head) {
         if(head==null) return head;
