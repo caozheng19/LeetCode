@@ -1,10 +1,7 @@
 package leetcode.problem513;
 
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
-
+import java.util.*;
 
 
 class TreeNode {
@@ -18,23 +15,22 @@ class Solution {
     public int findBottomLeftValue(TreeNode root) {
         if(root==null) return 0;
         List<Integer> list = new ArrayList<>();
-        Stack<TreeNode> stack = new Stack<>();
-        stack.add(root);
-        while(!stack.isEmpty()){
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while(!queue.isEmpty()){
             list.clear();
-            int stackSize = stack.size();
-            System.out.println("--------");
-            while(stackSize>0){
-                TreeNode node = stack.pop();
+            int queueSize = queue.size();
+            while(queueSize>0){
+                TreeNode node = queue.poll();
                 list.add(node.val);
-                System.out.print(node.val);
-                if(node.right!=null){
-                    stack.add(node.right);
-                }
+
                 if(node.left!=null){
-                    stack.add(node.left);
+                    queue.add(node.left);
                 }
-                stackSize--;
+                if(node.right!=null){
+                    queue.add(node.right);
+                }
+                queueSize--;
             }
         }
         return list.get(0);
