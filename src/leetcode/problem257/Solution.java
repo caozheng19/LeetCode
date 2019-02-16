@@ -4,16 +4,17 @@ package leetcode.problem257;
 import java.util.ArrayList;
 import java.util.List;
 
+
 class TreeNode {
-     int val;
+      int val;
       TreeNode left;
       TreeNode right;
       TreeNode(int x) { val = x; }
-}
+  }
 
 class Solution {
-    public List<List<Integer>> outerList = new ArrayList<>();
-    public List<Integer> innerList = new ArrayList<>();
+    private List<List<Integer>> outerList = new ArrayList<>();
+    private List<Integer> innerList = new ArrayList<>();
     public List<String> binaryTreePaths(TreeNode root) {
 
 
@@ -31,10 +32,7 @@ class Solution {
         if(node.right!=null){
             dfs(node.right,innerList);
         }
-        outerList.add(innerList);
-        innerList.remove(innerList.size()-1);
-
-
-
+        outerList.add(new ArrayList<>(innerList));
+        // innerList.remove(innerList.size()-1);
     }
 }
