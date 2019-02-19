@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+//思路就是把数组的值作为键 把数组中值的个数作为值
 class Solution {
     public int[] intersect(int[] nums1, int[] nums2) {
         Map<Integer,Integer> map = new HashMap<>();
