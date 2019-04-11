@@ -21,7 +21,7 @@ class Solution {
         if(i==1){
            innerList.add(node.val);
         }
-        levelbianli(node.left,i-1); //注意这里
+        levelbianli(node.left,i-1); //注意这里 当时写成了和下面代码一样的--ilevelbianli(node.left,--i);
         levelbianli(node.right,i-1);
     }
     
