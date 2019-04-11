@@ -1,8 +1,8 @@
-package leetcode.InputAndOutput;
+package leetcode.AInputAndOutput;
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.lang.IllegalStateException;
+
 public class Main {
 
     public static void main(String[] args) throws IOException {
