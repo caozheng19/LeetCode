@@ -1,4 +1,4 @@
-package leetcode.buildBinaryTree;
+package leetcode.ABuildBinaryTree;
 import java.util.LinkedList;
 import java.util.Queue;
 
