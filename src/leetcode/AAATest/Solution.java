@@ -8,5 +8,7 @@ class Solution {
     public static void main(String[] args){
         Short b = 128;
         System.out.println(b);
+
+
     }
 }
